@@ -1,5 +1,8 @@
 type: object
 properties:
+  credentialId:
+    type: string
+    description: The credential identificator string
   credential:
     type: object
     properties:
@@ -50,6 +53,7 @@ properties:
     type: string
     description: Leave empty to recieve "text/plain" email
 required:
+  - credentialId
   - credential
   - sender
   - recipients

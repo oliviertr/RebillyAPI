@@ -21,6 +21,9 @@ properties:
         "param2": "value2"
   body:
     type: string
+  credentialId:
+    type: string
+    description: The credential identificator string
   auth:
     $ref: "#/definitions/WebhookAuthorization"
   headers:
