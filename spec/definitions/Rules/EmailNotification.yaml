@@ -1,30 +1,7 @@
 type: object
 properties:
-  credentialId:
-    type: string
-    description: The credential identificator string
   credential:
-    type: object
-    properties:
-      host:
-        type: string
-      port:
-        type: integer
-        minimum: 1
-        maximum: 65535
-        default: 25
-      encryption:
-        type: string
-        enum:
-          - none
-          - tls
-          - ssl
-        default: none
-      auth:
-        $ref: "#/definitions/SmtpAuthorization"
-    required:
-      - host
-      - auth
+    $ref: "#/definitions/EmailNotificationCredential"
   sender:
     type: string
     format: email
@@ -53,7 +30,6 @@ properties:
     type: string
     description: Leave empty to recieve "text/plain" email
 required:
-  - credentialId
   - credential
   - sender
   - recipients
